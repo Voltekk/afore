@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+	{% for case in cases %}
+		<h3 class="case_title"><strong>{{ case.case_id }}</strong><h3>
+		<hr></hr>
+		<h4><small>{{ case.created_at.strftime('%b %d, %Y %H:%M %Z') }}</small></h4>
+		<hr class="case-divider"/>
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+	{% for request in requests %}
+		<h2 class="case_title"><strong>{{ request.request_id }}</strong><h2>
+		<hr></hr>
+		<h4>{{ request.created_at.strftime('%b %d, %Y %H:%M %Z') }}</h4>
+		<h1>Case: {{request.request_caseid }}</h1>
+		<h1>Type: {{ request.request_type }}</h1>
+		<hr class="case-divider"/>
+	{% endfor %}
+{% endblock %}

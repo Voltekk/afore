@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="starter-template">
+<h1>Create Case</h1>	
+<form action="{{ url_for('case_create') }}" method="post">
+	{{ form.hidden_tag() }}
+	
+	<p class="text-left">
+	{{ form.case_id.label }}<br>
+	{{ form.case_id(class_='form-control') }}<br>
+    </p>
+    <p class="text-left">
+    {{ form.case_classify.label }}<br>
+    {{ form.case_classify(class_='form-control') }}<br>
+    </p>
+    <p class="text-left">
+    {{ form.case_type.label }}<br>
+    {{ form.case_type(class_='form-control') }}<br>
+    </p>
+    <p class="text-left">
+    {{ form.case_synopsis.label }}<br>
+    {{ form.case_synopsis(class_='form-control') }}<br>	
+    </p>    
+    <p><input type="submit" value="Create Case"></p>
+</form>
+</div>
+{% endblock %}

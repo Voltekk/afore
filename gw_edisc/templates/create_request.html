@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="starter-template">
+<h1>Create Request</h1>	
+<form action="{{ url_for('req_create') }}" method="post">
+	{{ form.hidden_tag() }}
+	
+	<p class="text-left">
+	{{ form.request_caseid.label }}<br>
+	{{ form.request_caseid(class_='form-control') }}<br>
+	</p>
+	<p class="text-left">
+	{{ form.request_id.label }}<br>
+	{{ form.request_id(class_='form-control') }}<br>
+	</p>
+	<p class="text-left">
+	{{ form.request_type.label }}<br>
+	{{ form.request_type(class_='form-control') }}<br>
+    </p>
+    <p class="text-left">
+    {{ form.institution.label }}<br>
+    {{ form.institution(class_='form-control') }}<br>
+    </p>
+    <p class="text-left">
+    {{ form.requesters.label }}<br>
+    {{ form.requesters(class_='form-control') }}<br>
+    </p>
+    <p class="text-left">
+    {{ form.auth_contacts.label }}<br>
+    {{ form.auth_contacts(class_='form-control') }}<br>	
+    </p>    
+    <p class="text-left">
+    {{ form.req_notes.label }}<br>
+    {{ form.req_notes(class_='form-control') }}<br>	
+    </p>   
+    <p><input type="submit" value="Create Request"></p>
+</form>
+</div>
+{% endblock %}
